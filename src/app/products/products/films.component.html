@@ -1,0 +1,24 @@
+<mat-spinner *ngIf="!(products$ | async)"></mat-spinner>
+
+<div class="list-heading">
+  <h1>Producte</h1>
+</div>
+
+<div class="responsive-grid">
+  <mat-card
+    *ngFor="let product of products$ | async"
+    (click)="goToProduct(product.url)"
+  >
+    <img mat-card-image src="assets/products.jpg" />
+    <mat-card-header>
+      <mat-card-title>{{ product.title }}</mat-card-title>
+    </mat-card-header>
+    <br />
+    <mat-card-content>
+      <p>Director: {{ product.director }}</p>
+      <p>Produzenten: {{ product.producer }}</p>
+      <p>Erscheinungsdatum: {{ product.release_date }}</p>
+      <br />
+    </mat-card-content>
+  </mat-card>
+</div>

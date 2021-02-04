@@ -1,0 +1,18 @@
+<ng-container *ngIf="product$ | async as product; else spinner">
+  <div class="list-heading">
+    <div class="pretitle">Product Details</div>
+    <hr class="separator" />
+    <h1>{{ product.title }}</h1>
+  </div>
+  <p class="detail wide">{{ product.opening_crawl }}</p>
+  <br />
+  <p class="detail wide">Regisseur: {{ product.director }}</p>
+  <br />
+  <p class="detail wide">Produzenten: {{ product.producer }}</p>
+  <br />
+  <p class="detail wide">Erscheinungsdatum: {{ product.release_date }}</p>
+</ng-container>
+
+<ng-template #spinner>
+  <mat-spinner></mat-spinner>
+</ng-template>

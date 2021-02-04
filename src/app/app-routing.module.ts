@@ -3,21 +3,15 @@ import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
-    path: 'films',
-    loadChildren: () => import('./films/films.module').then((mod: any) => mod.FilmsModule),
-  },
-  {
-    path: 'characters',
+    path: 'products',
     loadChildren: () =>
-      import('./characters/characters.module').then((mod: any) => mod.CharactersModule),
-  },
-  {
-    path: 'planets',
-    loadChildren: () => import('./planets/planets.module').then((mod: any) => mod.PlanetsModule),
+      import('./products/products.module').then(
+        (mod: any) => mod.ProductsModule
+      ),
   },
   {
     path: '**',
-    redirectTo: 'films',
+    redirectTo: 'products',
   },
 ];
 
