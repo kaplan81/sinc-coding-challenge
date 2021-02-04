@@ -6,16 +6,19 @@
 
 <div class="responsive-grid">
   <mat-card *ngFor="let product of products$ | async">
-    <img mat-card-image src="assets/products.jpg" />
-    <mat-card-header>
-      <mat-card-title>{{ product.title }}</mat-card-title>
-    </mat-card-header>
-    <br />
-    <mat-card-content>
-      <p>Director: {{ product.director }}</p>
-      <p>Produzenten: {{ product.producer }}</p>
-      <p>Erscheinungsdatum: {{ product.release_date }}</p>
+    <div class="mat-card-top">
+      <img mat-card-image [src]="product.image" />
+    </div>
+    <div class="mat-card-bottom">
+      <mat-card-header>
+        <mat-card-title>{{ product.title }}</mat-card-title>
+      </mat-card-header>
       <br />
-    </mat-card-content>
+      <mat-card-content>
+        <p>Price: {{ product.price }}</p>
+        <p>Category: {{ product.category }}</p>
+        <br />
+      </mat-card-content>
+    </div>
   </mat-card>
 </div>

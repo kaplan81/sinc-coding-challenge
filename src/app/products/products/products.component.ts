@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Observable, of } from 'rxjs';
+import { Observable } from 'rxjs';
 import { FakeStoreService } from '../../fake-store.service';
 
 @Component({
@@ -9,7 +9,7 @@ import { FakeStoreService } from '../../fake-store.service';
   styleUrls: ['./products.component.scss'],
 })
 export class ProductsComponent {
-  products$: Observable<any[]> = of([{}]);
+  products$: Observable<any[]> = this.fakeStoreService.getProducts();
 
   constructor(
     private route: ActivatedRoute,
