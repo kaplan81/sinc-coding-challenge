@@ -1,0 +1,18 @@
+<ng-container *ngIf="film$ | async as film; else spinner">
+  <div class="list-heading">
+    <div class="pretitle">Film Details</div>
+    <hr class="separator" />
+    <h1>{{ film.title }}</h1>
+  </div>
+  <p class="detail wide">{{ film.opening_crawl }}</p>
+  <br />
+  <p class="detail wide">Regisseur: {{ film.director }}</p>
+  <br />
+  <p class="detail wide">Produzenten: {{ film.producer }}</p>
+  <br />
+  <p class="detail wide">Erscheinungsdatum: {{ film.release_date }}</p>
+</ng-container>
+
+<ng-template #spinner>
+  <mat-spinner></mat-spinner>
+</ng-template>

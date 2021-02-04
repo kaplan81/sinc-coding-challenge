@@ -1,1 +1,75 @@
-/* You can add global styles to this file, and also import other style files */
+html,
+body {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  line-height: 1;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Roboto, 'Helvetica Neue', sans-serif;
+  font-size: 16px !important;
+  color: #333;
+  h1 {
+    font-size: 4rem !important;
+    font-weight: 900 !important;
+    width: 100%;
+    height: 100px;
+    line-height: 100px !important;
+    text-align: center;
+  }
+  ul {
+    list-style-type: none;
+  }
+  input:focus,
+  textarea:focus,
+  select:focus,
+  li:focus {
+    outline: none;
+  }
+  .list-heading {
+    margin: 75px 0;
+    .pretitle {
+      text-align: center;
+      font-size: 1.4rem;
+    }
+  }
+  .responsive-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-auto-rows: 1fr;
+    grid-gap: 40px;
+    margin-bottom: 100px;
+    mat-card {
+      background-color: #eee;
+      cursor: pointer;
+      mat-card-content {
+        margin-left: 20px;
+      }
+    }
+  }
+  .separator {
+    width: 10%;
+    margin: 20px auto;
+  }
+  .detail {
+    margin: 0 auto;
+    &.wide {
+      width: 90%;
+    }
+    &.narrow {
+      width: 50%;
+    }
+  }
+  .mat-spinner {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -25px 0 0 -25px;
+    circle {
+      stroke: black;
+    }
+    z-index: 999;
+  }
+}
