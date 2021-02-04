@@ -39,6 +39,7 @@ body {
     grid-auto-rows: repeat(auto-fill, minmax(300px, 1fr));
     grid-gap: 40px;
     margin-bottom: 100px;
+    margin-top: 20px;
     mat-card {
       background-color: #eee;
       cursor: pointer;

@@ -1,8 +1,8 @@
 <mat-spinner *ngIf="!(products$ | async)"></mat-spinner>
-
+<!--
 <div class="list-heading">
-  <h1>Producte</h1>
-</div>
+  <h1>Products</h1>
+</div> -->
 
 <div class="responsive-grid">
   <mat-card *ngFor="let product of products$ | async">
