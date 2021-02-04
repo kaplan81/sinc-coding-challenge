@@ -1,16 +1,26 @@
 <ng-container *ngIf="product$ | async as product; else spinner">
-  <div class="list-heading">
-    <div class="pretitle">Product Details</div>
-    <hr class="separator" />
+  <div class="product-details__heading">
+    <mat-icon
+      aria-hidden="false"
+      aria-label="Example home icon"
+      routerLink="products"
+      >keyboard_backspace</mat-icon
+    >
     <h1>{{ product.title }}</h1>
   </div>
-  <p class="detail wide">{{ product.opening_crawl }}</p>
-  <br />
-  <p class="detail wide">Regisseur: {{ product.director }}</p>
-  <br />
-  <p class="detail wide">Produzenten: {{ product.producer }}</p>
-  <br />
-  <p class="detail wide">Erscheinungsdatum: {{ product.release_date }}</p>
+  <div class="product-details__content">
+    <div class="left">
+      <p class="detail wide">{{ product.description }}</p>
+      <br />
+      <p class="detail wide"><b>Price:</b> {{ product.price }}&euro;</p>
+      <br />
+      <p class="detail wide"><b>Category:</b> {{ product.category }}</p>
+      <br />
+    </div>
+    <div class="right">
+      <img mat-card-image [src]="product.image" />
+    </div>
+  </div>
 </ng-container>
 
 <ng-template #spinner>

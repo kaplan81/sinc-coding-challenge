@@ -5,7 +5,10 @@
 </div> -->
 
 <div class="responsive-grid">
-  <mat-card *ngFor="let product of products$ | async">
+  <mat-card
+    *ngFor="let product of products$ | async"
+    (click)="goToProduct(product.id)"
+  >
     <div class="mat-card-top">
       <img mat-card-image [src]="product.image" />
     </div>
@@ -15,7 +18,7 @@
       </mat-card-header>
       <br />
       <mat-card-content>
-        <p>Price: {{ product.price }}</p>
+        <p>Price: {{ product.price }}&euro;</p>
         <p>Category: {{ product.category }}</p>
         <br />
       </mat-card-content>

@@ -12,7 +12,11 @@ export class ProductsComponent {
   products$: Observable<any[]> = this.fakeStoreService.getProducts();
 
   constructor(
-    private route: ActivatedRoute,
-    private fakeStoreService: FakeStoreService
+    private fakeStoreService: FakeStoreService,
+    private route: ActivatedRoute
   ) {}
+
+  goToProduct(productId: number): void {
+    this.fakeStoreService.goToEntity(productId, this.route);
+  }
 }

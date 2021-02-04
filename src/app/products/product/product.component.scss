@@ -1,0 +1,27 @@
+.product-details {
+  &__heading {
+    display: flex;
+    align-items: center;
+    padding-left: 100px;
+    mat-icon {
+      font-size: 2.2rem;
+      cursor: pointer;
+    }
+  }
+  &__content {
+    margin-top: 30px;
+    display: flex;
+    .left {
+      width: 60%;
+      padding: 50px;
+      font-size: 1.3rem;
+      text-align: justify;
+    }
+    .right {
+      width: 40%;
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
