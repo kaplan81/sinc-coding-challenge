@@ -5,10 +5,7 @@
 </div>
 
 <div class="responsive-grid">
-  <mat-card
-    *ngFor="let product of products$ | async"
-    (click)="goToProduct(product.url)"
-  >
+  <mat-card *ngFor="let product of products$ | async">
     <img mat-card-image src="assets/products.jpg" />
     <mat-card-header>
       <mat-card-title>{{ product.title }}</mat-card-title>

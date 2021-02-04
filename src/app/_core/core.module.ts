@@ -1,6 +1,5 @@
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { NgModule, Optional, SkipSelf } from '@angular/core';
-import { Angular2SwapiModule } from 'src/app/products/products/node_modules/src/app/products/product/node_modules/angular2-swapi';
 import { InterceptorService } from './interceptor.service';
 
 @NgModule({
@@ -11,7 +10,7 @@ import { InterceptorService } from './interceptor.service';
       multi: true,
     },
   ],
-  exports: [HttpClientModule, Angular2SwapiModule],
+  exports: [HttpClientModule],
 })
 export class CoreModule {
   constructor(
